@@ -60,7 +60,7 @@ body {
 
 .banner {
   height: var(--tamanho-banner);
-  background-image: url('/Imagens/foto_home2.png');
+  background-image: url('/Tlougram/Imagens/foto_home2.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -117,13 +117,15 @@ body {
   align-items: center;
 }
 
+
+
 .box p {
   text-align: center;
 }
 
 .login {
   height: var(--tamanho-login);
-  background-image: url('/Imagens/foto_mato.jpg');
+  background-image: url('/Tlougram/Imagens/Foto_mato.jpg');
   background-size: cover;
 
 }
@@ -266,7 +268,7 @@ body {
 
 .sobre_jogo .container {
   flex-direction: column ;
-background-image: url(/Imagens/foto_mato2.jpg);
+background-image: url("/Tlougram/Imagens/foto_mato2.jpg");
 background-color: rgb(255, 255, 255);
 
 
