@@ -21,7 +21,11 @@ body {
 
 .header {
   height: var(--tamanho-header);
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid #000000;  
+}
+
+.header .container .navbar ul{
+  list-style: none;
 }
 
 .header .container {
@@ -32,11 +36,9 @@ body {
 
 .header a {
   text-decoration: none;
-  color: #000000;
-}
-
-.agora {
-  font-weight: 800;
+  color: rgb(255, 255, 255);
+  /* text-shadow: #b4a9a9;  */
+  
 }
 
 .navbar {
@@ -47,6 +49,47 @@ body {
   list-style: none;
   color: #000000;
 }
+
+/* unvisited link */
+a:link {
+  color: rgb(0, 0, 0);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(3, 3, 3);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(49, 168, 13);
+}
+
+/* selected link */
+a:active {
+  color: rgb(49, 168, 13);
+}
+
+li:hover {
+  color: rgb(49, 168, 13);
+}
+
+li:active {
+  color: rgb(49, 168, 13);
+}
+
+li:link {
+  color: rgb(0, 0, 0);
+}
+
+li:visited {
+  color: rgb(3, 3, 3);
+}
+
+.agora {
+  font-weight: 800;
+}
+
 
 .titulo {
   color: #000000;
@@ -147,6 +190,7 @@ body {
   flex-direction: column;
   color: rgb(255, 255, 255);
   row-gap: 20px;
+box-shadow: 5px 10px #000000;
 }
 
 .card-cadastro {
@@ -169,11 +213,13 @@ body {
   width: 80%;
   justify-content: space-around;
   flex-direction: column;
+  
 }
 
 .formulario span {
   font-size: 15px;
   font-weight: 800;
+  box-shadow: 1px 4px 5px #000000;
 }
 
 .formulario input {
