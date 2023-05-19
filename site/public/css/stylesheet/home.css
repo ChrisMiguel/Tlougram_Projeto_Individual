@@ -1,0 +1,360 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', 'Poppins', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #3D6235
+  }
+  
+  :root {
+    --tamanho-header: 50px;
+    --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+    --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+    --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+    --tamanho-footer: 65px;
+  }
+  
+  .container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+  
+  }
+  
+  .header {
+    height: var(--tamanho-header);
+    border-bottom: 2px solid #000000;
+  }
+  
+  .header .container .navbar ul {
+    list-style: none; 
+  }
+  
+  .header .container {
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .header a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    /* text-shadow: #b4a9a9;  */
+  
+  }
+  
+  .navbar {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    color: #000000;
+  }
+
+  .botao {
+    cursor: grabbing;
+    font-family: "Barlow", sans-serif;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000b0;
+    background-color: #ffffffd7;
+    width: 300px;
+    height: 100px;
+    align-self: last baseline;
+    box-shadow: 10px 10px;
+    transition-duration: 0.6s;
+    margin-left: 70%;
+    margin-bottom: 8%;
+    list-style: none;
+  text-decoration: none;
+  }
+
+  .botao:hover {
+    color: #06c0159f;
+  }
+  
+  .botao:active {
+    color: #00f514;
+  }
+  
+  /* unvisited link */
+  a:link {
+    color: rgb(0, 0, 0);
+    animation-delay: 0.5s;
+    /* transition-delay: 0.1s;  */
+    transition-duration: 0.6s;
+  
+  
+  }
+  
+  /* visited link */
+  a:visited {
+    color: rgb(3, 3, 3);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: rgb(64, 231, 13);
+  }
+  
+  /* selected link */
+  a:active {
+    color: rgb(49, 168, 13);
+  }
+  
+  li:hover {
+    color: rgb(49, 168, 13);
+  }
+  
+  li:active {
+    color: rgb(49, 168, 13);
+  }
+  
+  li:link {
+    color: rgb(0, 0, 0);
+  }
+  
+  li:visited {
+    color: rgb(3, 3, 3);
+  }
+  
+  .agora {
+    font-weight: 800;
+  }
+  
+  
+  .titulo {
+    color: #000000;
+    width: fit-content;
+    font-weight: 500;
+  }
+  
+  .header h1 {
+    margin: 0;
+  }
+  
+  .banner {
+    height: var(--tamanho-banner);
+    background-image: url('../Imagens/foto_home2.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    height: 700px;
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .banner .container {
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .banner .container p {
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    width: 280px;
+  }
+  
+  .banner .container span {
+    font-weight: 800;
+  }
+  
+  .social {
+    background-color: #3D6235;
+    display: flex;
+  }
+  
+  .social .container {
+    justify-content: center;
+  }
+  
+  /* .box img {
+    width: 200px;
+  } */
+  
+  .social .container .boxes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  
+  .card h2 {
+    margin: 0;
+    font-size: 30px;
+  
+  }
+  
+  
+  .campo {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  
+  
+  
+  .footer {
+    height: var(--tamanho-footer);
+    width: 100%;
+    background-color: #284D1B;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  
+  .footer h4 {
+    margin: 0;
+  }
+  
+  .footer .container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .footer .container .version {
+    font-size: 12px;
+    font-weight: 800;
+  }
+  
+  
+  .card-info {
+    width: 270px;
+    height: 380px;
+    background-color: rgba(255, 255, 255, 0.425);
+    box-shadow: 1px 1px 8px #000000;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 10px;
+    list-style: none;
+  text-decoration: none;
+  text-align: center;
+  }
+  
+  .card-info img {
+    width: 200px;
+    height: auto;
+    margin: 5%;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  /* Letras dentro do card */
+  .card-info p {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-family: sans-serif;
+    font-size: 20px;
+    /* font-weight: 600px; */
+    
+  }
+  
+  .card-info h2 {
+    margin: 0%;
+    color: #000000;
+  }
+  
+  .card-info a{
+    text-decoration: none;
+  } 
+  
+  
+  .card-info {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 10px 0 rgba(255, 255, 255, 0.801);
+    transition: 0.4s;
+  
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card-info:hover {
+    box-shadow: 0 13px 20px 0 rgb(255, 255, 255);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+
+  .video{
+     /* align-items: center; */
+    /* margin-top: 5%; */
+    /* margin-bottom: 10%; */
+    margin-left: 27%;
+    /* margin-bottom: 10%; */
+    /* justify-content: center;  */
+  } 
+  
+.parte_baixa{
+  height: var(--tamanho-banner);
+  background-image: url('../Imagens/foto_fundoHome.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 100%;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 5%;
+  margin-bottom: 0px;
+}
+
+.musica{
+  background-color: #ffffff70;
+  width: 100%;
+  height: 100%;
+  /* margin-bottom: 10px; */
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  padding-left: 80px;
+}
+
+.musica2{
+  display: flex;
+margin-left: 30px;
+
+}
+
+.musica3{
+  
+  margin-left: 35%;
+  margin-bottom: 5px;
+  width: 550px; 
+  height: 400px;
+  border-radius: 10px;
+}
+.legenda{
+  margin-left: 35%;
+}
+
+  .footer .container .footer-imagem {
+    width: 200px;
+    height: 35px;
+    margin-right: 100%;
+    /* justify-content: start; */
+  
+  }
+  
+  .footer .container .footer-imagem2 {
+    width: 200px;
+    height: 40px;
+  }
+  

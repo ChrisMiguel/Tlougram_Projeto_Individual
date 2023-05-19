@@ -1,0 +1,290 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', 'Poppins', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #3D6235
+}
+
+:root {
+  --tamanho-header: 50px;
+  --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-footer: 65px;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+
+}
+
+.header {
+  height: var(--tamanho-header);
+  border-bottom: 2px solid #000000;
+}
+
+.header .container .navbar ul {
+  list-style: none; 
+}
+
+.header .container {
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  /* text-shadow: #b4a9a9;  */
+
+}
+
+.navbar {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  color: #000000;
+}
+
+/* unvisited link */
+a:link {
+  color: rgb(0, 0, 0);
+  animation-delay: 0.5s;
+  /* transition-delay: 0.1s;  */
+  transition-duration: 0.6s;
+
+
+}
+
+/* visited link */
+a:visited {
+  color: rgb(3, 3, 3);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(64, 231, 13);
+}
+
+/* selected link */
+a:active {
+  color: rgb(49, 168, 13);
+}
+
+li:hover {
+  color: rgb(49, 168, 13);
+}
+
+li:active {
+  color: rgb(49, 168, 13);
+}
+
+li:link {
+  color: rgb(0, 0, 0);
+}
+
+li:visited {
+  color: rgb(3, 3, 3);
+}
+
+.agora {
+  font-weight: 800;
+}
+
+
+.titulo {
+  color: #000000;
+  width: fit-content;
+  font-weight: 500;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+
+.login {
+  height: var(--tamanho-login);
+  background-image: url('../Imagens/foto_janela.png');
+  background-size: cover;
+
+}
+
+.login .container {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.card {
+  width: 40%;
+  background-color: #284d1ba4;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+  row-gap: 10px;
+  box-shadow: 10px 15px #000000b0;
+}
+
+.card-cadastro {
+  height: 90%;
+  width: 40%;
+}
+
+.card-login {
+  height: 80%;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 30px;
+
+}
+
+.formulario {
+  display: flex;
+  height: 90%;
+  width: 80%;
+  justify-content: space-around;
+  flex-direction: column;
+  /* box-shadow: 800px 800px 800px #00000056; */
+  /* outline: none; */
+  /* box-sizing: border-box; */
+}
+
+
+.formulario span {
+  font-size: 15px;
+  font-weight: 800;
+  /* box-shadow: 10px 10px 10px #000000; */
+}
+
+.formulario input {
+  border: 2px solid #00ff2a;
+  height: 30px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 10px 15px #000000b0;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.botao {
+  cursor: grabbing;
+  font-family: "Barlow", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+  background-color: #19b121;
+  width: 250px;
+  height: 50px;
+  align-self: center;
+  box-shadow: 10px 10px;
+  transition-duration: 0.6s;
+}
+
+.botao:hover {
+  color: #ffffffc5;
+}
+
+.botao:active {
+  color: rgb(254, 255, 255);
+}
+
+.loading-div {
+  width: 50px;
+  display: none;
+}
+
+.loading-div img {
+  height: 50px;
+  width: 50px;
+}
+
+#div_erros_login {
+  display: none
+}
+
+.alerta_erro {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card_erro {
+  display: none;
+  background-color: #284D1B;
+  color: rgb(255, 255, 255);
+  width: 230px;
+  position: fixed;
+  border-radius: 4px;
+  border: #000000 3px solid;
+  padding: 10px;
+  margin-right: 10%;
+}
+
+.card_erro #mensagem_erro {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.footer {
+  height: var(--tamanho-footer);
+  width: 100%;
+  background-color: #284D1B;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.footer h4 {
+  margin: 0;
+}
+
+.footer .container {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.footer .container .version {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.sobre_jogo {
+  color: rgb(0, 0, 0);
+}
+
+
+
+.footer .container .footer-imagem {
+  width: 200px;
+  height: 35px;
+  margin-right: 100%;
+  /* justify-content: start; */
+
+}
+
+.footer .container .footer-imagem2 {
+  width: 200px;
+  height: 40px;
+
+}
