@@ -44,10 +44,11 @@
   <div class="banner">
     <div class="container">
       <button class="botao" onclick="entrar()"> Cadastrar-se</button>
-                
+
     </div>
   </div>
 
+  <!-- Cards  -->
   <div class="social">
     <div class="container">
       <div class="boxes">
@@ -95,49 +96,90 @@
 
   <!-- video do tlou -->
   <div class="parte_baixa">
-    <div class="video"><iframe width="700" height="400" src="https://www.youtube.com/embed/a22gIu112Ek" title="Ellie e Joel discutindo na cabana cena completa The last of us remastered" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+    <div class="video"><iframe width="700" height="400" src="https://www.youtube.com/embed/a22gIu112Ek"
+        title="Ellie e Joel discutindo na cabana cena completa The last of us remastered" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe></div>
 
   </div>
- 
+
   <!-- musica do tlou -->
   <div class="musica">
-  <h1>Música de Gustavo Santaolalla</h1>
+    <h1>Música de Gustavo Santaolalla</h1>
 
-      <h3>Clique para escutar a melodia de THE LAST OF US:</h3></p>
-     <div class="musica2">
+    <h3>Clique para escutar a melodia de THE LAST OF US:</h3>
+    </p>
+    <div class="musica2">
       <audio controls loop>
-        <source 
-        src="C:\Faculdade\Faculdade__\Atividades_Chris\Meu site - tlougram\Novo Tlougram\Tlougram_Projeto_Individual\site\public\Música\The Last Of Us Theme Song ( no copyright) [GTS].mp3"
-        type="audio/ogg">
-      </audio> 
+        <source
+          src="D:\AFaculdade\Atividades_Chris\Meu site - tlougram\Meu site\Tlougram_Projeto_Individual\site\public\Música\The Last Of Us Theme Song ( no copyright) [GTS].mp3"
+          type="audio/ogg">
+      </audio>
     </div>
-      
-    <img class="musica3"  src="./css/Imagens/gustavo_santaolalla.jpg" usemap="#teste">
-      
-      <!-- Deixar a imagem clicável -->
-      <map name="teste">
-        <area shape="default" alt="wikipedia_gustavo" href="https://pt.wikipedia.org/wiki/Gustavo_Santaolalla" onclick="teste2()">
-      </map>
-      <div class="legenda">Gustavo Santaolalla compositor e Neil Druckman roteirista de The last of us</div>
-    </div>
-</body>
 
+    <img class="musica3" src="./css/Imagens/gustavo_santaolalla.jpg" usemap="#teste">
 
-<div class="footer">
-  <div class="container">
-    <img class="footer-imagem" src="./css/Imagens/Naughty_Dog_logo.svg.png">
-    <!-- <img class="footer-imagem2" src="./css/Imagens/Logo_ps4.jpg"> -->
+    <!-- Deixar a imagem clicável -->
+    <map name="teste">
+      <area shape="default" alt="wikipedia_gustavo" href="https://pt.wikipedia.org/wiki/Gustavo_Santaolalla"
+        onclick="teste2()">
+    </map>
+    <div class="legenda">Gustavo Santaolalla compositor e Neil Druckman roteirista de The last of us</div>
   </div>
-</div>
+
+  <!-- Foto com meu primo -->
+  <div class="foto_primos">
+    <div class="foto_primos2">
+      <h2>Christian e Lucas</h2>
+      <img src="./css/Imagens/Lucao_Chris.jpg" style=" height: 550px;  width: 600px;">
+      <p>Aqui está eu e meu primo jogando The last of us</p>
+    </div>
+
+    <!-- Card ajuda -->
+    <div class="container">
+      <div class="card card-login">
+        <h2>Bem vindo novato, segue formulário para ajuda!</h2>
+        <div class="formulario">
+          <div class="campo">
+            <span>Pergunta:</span>
+            <input id="nome_input" type="text" placeholder="Sua pergunta...">
+          </div>
+          <div class="campo">
+            <span>Nome:</span>
+            <input id="email_input" type="text" placeholder="Seu nome aqui!">
+          </div>
+          <div class="campo">
+            <span>E-mail:</span>
+            <input id="senha_input" type="text" placeholder="meuemail@provedor.com">
+          </div>
+
+          <button class="botao2" onclick="cadastrar()">Enviar pergunta</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- RODAPÉ -->
+  <div class="footer">
+    <div class="container">
+      <img class="footer-imagem" src="./css/Imagens/Naughty_Dog_logo.svg.png">
+      <!-- <img class="footer-imagem2" src="./css/Imagens/Logo_ps4.jpg"> -->
+    </div>
+  </div>
+
+
 </body>
 
 </html>
 <script>
-function entrar(){
-  alert('Ok! Vamos lá sobrevivente')
-  window.location = 'cadastro.html'
-}
-function teste2(){
-  alert('Vamos conhecer um pouco mais do compositor')
-}
+  function entrar() {
+    alert('Ok! Vamos lá sobrevivente')
+    window.location = 'cadastro.html'
+  }
+  function teste2() {
+    alert('Vamos conhecer um pouco mais do compositor')
+  }
 </script>
