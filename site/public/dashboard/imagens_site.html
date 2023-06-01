@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tlougram | Imagens</title>
+
+    <script src="./js/funcoes.js"></script>
+
+    <link rel="icon" href="../css/Imagens/icone.png">
+    <link rel="stylesheet" href="../css/stylesheet/tela_segredos.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!--header inicio-->
+    <!-- <div class="header">
+        <div class="container">
+            <h1 class="titulo"><a href="index.html"></a></h1>
+            <ul class="navbar">
+
+            
+
+                <li>
+                    <a href="segredos.html">Segredos</a>
+                </li>
+                <li>|</li>
+                <li>
+                    <a href="login.html">Fotos</a>
+                </li>
+                <li>|</li>
+                <li class="agora">
+                    <a href="#">Medidor de fã</a>
+                </li>
+                <li>|</li>
+                <a href="login.html">Quiz</a>
+                </li>
+            </li>
+            <li>|</li>
+            <a href="login.html">Sair</a>
+            </li>
+            </ul>
+        </div>
+    </div> -->
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo"><a href="index.html"></a></h1>
+            <ul class="navbar">
+                <li>
+                    <a href="segredosEllie.html">Segredos</a>
+                </li>
+                <li>|</li>
+                <li>
+                <li class="agora">
+                    <a href="#">Fotos</a>
+                </li>
+                </li>
+                <li>|</li>
+
+                <a href="medidor_fa.html">Medidor de fã</a>
+                </li>
+                <li>|</li>
+                <a href="quiz.html">Quiz</a>
+                </li>
+                </li>
+                <li>|</li>
+                <a href="index.html">Sair</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- carrossel de imagens -->
+    <div class="cor_fundo">
+        <div class="all">
+            <div id="carrossel1" class="slides">
+            </div>
+
+            <div class="img_carrossel">
+                <img class="seta_slide" onclick="esquerda()" height="50px" width="100px"
+                    src="../css/Imagens/FotosCarrosel/seta_esquerda.png" alt="seta_esquerda">
+                <div class="img_carrosel">
+                    <img class="seta_slide" onclick="direita()" height="50px" width="50px"
+                        src="../css/Imagens/FotosCarrosel/seta_direita.png" alt="seta_esquerda">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Sobre o jogo fim -->
+
+    <!--footer inicio-->
+    <footer>
+
+
+        <img class="footer-imagem" src="../css/Imagens/Naughty_Dog_logo.svg.png">
+        <img class="footer-imagem" src="../css/Imagens/Logo_ps4.jpg">
+        <img class="footer-imagem" src="../css/Imagens/foto_janela.png ">
+
+
+    </footer>
+    <!--footer fim-->
+    
+
+</body>
+
+
+</html>
+<script>
+
+    var contador = 0;
+    var carrossel = ['<a href="segredosEllie.html"><img class="img_cortes" src="../css/Imagens/FotosCarrosel/Ellie-Riley.jpg"></a>',
+        '<a href="segredosEllie.html"><img class="img_cortes" src="../css/Imagens/FotosCarrosel/Ellie1.jpg"></a>',
+        '<a href="segredosInfectados.html"><img class="img_cortes" src="../css/Imagens/FotosCarrosel/infectados5.jpg"></a>',
+        '<a href="segredosEllie.html"><img class="img_cortes" src="../css/Imagens/FotosCarrosel/Ellie_animais.png"></a>',
+        '<a href="segredosEllie.html"><img class="img_cortes" src="../css/Imagens/FotosCarrosel/EllieSniper.jpg"></a>',
+        '<a href="segredosJoel.html"><img class="img_cortes" src="../css/Imagens/FotosCarrosel/girafas.jpg"></a>',
+        '<a href="segredosJoel.html"><img class="img_cortes" src="../css/Imagens/FotosCarrosel/Mato.jpg"></a>',
+        '<a href="segredosJoel.html"><img class="img_cortes" src="../css/Imagens/FotosCarrosel/Onibus.jpg"></a>',
+        '<a href="segredosJoel.html"><img class="img_cortes" src="../css/Imagens/FotosCarrosel/Tess.jpg"></a>',
+        '<a href="segredosJoel.html"><img class="img_cortes" src="../css/Imagens/FotosCarrosel/ZonaDeQuarentena.jpg"></a>',
+        '<a href="segredosEllie.html"><img class="img_cortes" src="../css/Imagens/FotosCarrosel/EllieEcavalo.jpg"></a>',
+        '<a href="segredosJoel.html"><img class="img_cortes" src="../css/Imagens/FotosCarrosel/JoelAfogando.jpg"></a>',
+        '<a href="segredosEllie.html"><img class="img_cortes" src="../css/Imagens/FotosCarrosel/SoEllie.jpg"></a>',
+        '<a href="segredosJoel.html"><img class="img_cortes" src="../css/Imagens/FotosCarrosel/SoJoel.jpg"></a>',
+        '<a href="segredosJoel.html"><img class="img_cortes" src="../css/Imagens/FotosCarrosel/EllieeJoel.jpg"></a>',
+        '<a href="segredosEllie.html"><img class="img_cortes" src="../css/Imagens/FotosCarrosel/EllieeJoel.jpg"></a>',
+        '<a href="segredosInfectados.html"><img class="img_cortes" src="../css/Imagens/FotosCarrosel/infectados4.jpg"></a>'];
+
+    carrossel1.innerHTML = carrossel[contador];
+
+    function direita() {
+        if (contador == carrossel.length - 1) {
+            contador = 0;
+        } else {
+            contador++;
+        } if (contador < carrossel.length) {
+            carrossel1.innerHTML = `${carrossel[contador]}`
+        }
+
+    }
+    function esquerda() {
+        contador -= 1;
+        if (contador == -1) {
+            contador = carrossel.length - 1
+        }
+        carrossel1.innerHTML = `${carrossel[contador]}`
+    }
+
+</script>

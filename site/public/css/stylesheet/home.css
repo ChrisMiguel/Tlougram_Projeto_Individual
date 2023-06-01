@@ -204,29 +204,29 @@ body {
   
   
   
-  .footer {
+  footer {
     height: var(--tamanho-footer);
     width: 100%;
     background-color: #284D1B;
     color: #fff;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  
     width: 100%;
+  
   }
   
-  .footer h4 {
+  
+  footer h4 {
     margin: 0;
   }
   
-  .footer .container {
+  footer .container {
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 100%;
   }
   
-  .footer .container .version {
+  footer .container .version {
     font-size: 12px;
     font-weight: 800;
   }
@@ -461,9 +461,15 @@ color: #fff;
     font-size: 30px;
   
   }
+
+  footer img {
+    height: 50px;
+    width: 190px;
+  }
+  
   
 
-  .footer .container .footer-imagem {
+ footer .footer-imagem {
     width: 200px;
     height: 35px;
     margin-right: 100%;
@@ -471,7 +477,7 @@ color: #fff;
   
   }
   
-  .footer .container .footer-imagem2 {
+  footer .container .footer-imagem2 {
     width: 200px;
     height: 40px;
   }

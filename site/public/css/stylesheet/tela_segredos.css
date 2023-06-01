@@ -142,9 +142,9 @@ body {
     color: rgb(0, 0, 0);
   }
   
-  .sobre_jogo .container {
+  .sobre_jogo2 .container {
     flex-direction: column;
-    background-image: url("../Imagens/foto_sobrejogo.jpg");
+    background-image: url("../Imagens/Segredos/Fundo_segredo.jpg");
     background-color: rgb(255, 255, 255);
     height: var(--tamanho-simulador);
     background-size: cover;
@@ -171,17 +171,11 @@ body {
   }
   
  
-  .footer .container .footer-imagem {
+  footer .container .footer-imagem {
     width: 200px;
     height: 35px;
     margin-right: 100%;
     /* justify-content: start; */
-  
-  }
-  
-  .footer .container .footer-imagem2 {
-    width: 200px;
-    height: 40px;
   
   }
   
@@ -192,8 +186,8 @@ body {
 }
   
 .foto_segredo2 {
-    width: 250px;
-    height: 150px;
+    width: 330px;
+    height: 200px;
 
     align-items: center;
     border-radius: 20px;
@@ -203,4 +197,42 @@ body {
     box-shadow: 3px 3px 8px #000000;
     align-items: center;
     justify-content: center;
+}
+.img_carrossel{
+position: absolute;
+display: flex;
+justify-content: space-between;
+align-self: center;
+width: 100%;
+height: 20px;
+margin-top: 50px;
+}
+.seta_slide{
+cursor: pointer;
+}
+.slides{
+  width: 80%;
+  height: 70vh;
+}
+
+.all{
+  /* background-color: rgba(0, 0, 0, 0.507); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  margin-bottom: 10%;
+
+}
+
+.img_cortes{
+  margin-left: 145px;
+  margin-top: 130px;
+  width: 70%;
+  z-index: 999;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 5px 5px 8px #000000;
+  margin-top: 5%;
 }

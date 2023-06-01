@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tlougram | Home</title>
+  <script src="./js/funcoes.js"></script>
+
+  <link rel="icon" href="../css/Imagens/icone.png">
+  <link rel="stylesheet" href="../css/stylesheet/home.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+
+  <div class="header">
+    <div class="container">
+      <h1 class="titulo"><a href="index.html">Tlougram</a></h1>
+      <ul class="navbar">
+        <li class="agora">
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="sobre.html">Sobre o jogo</a>
+        </li>
+        <li>|</li>
+        <li>
+          <a href="login.html">Login</a>
+        </li>
+        <li>
+          <a href="cadastro.html">Cadastro</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="banner">
+    <div class="container">
+      <button class="botao" onclick="entrar()"> Cadastrar-se</button>
+
+    </div>
+  </div>
+
+  <!-- Cards  -->
+  <div class="social">
+    <div class="container">
+      <div class="boxes">
+
+        <!-- <div class="box"> -->
+        <div class="card-info">
+          <a href="cadastro.html">
+            <h2>Ellie</h2>
+            <p><img src="../css/Imagens/Ellie_se_mexendo.gif" style="height: 140px; width: 230px;">
+              "Depois de tudo que passamos... Tudo que eu fiz, não pode ser em vão."
+              <br> — Ellie
+            </p>
+          </a>
+        </div>
+
+        <!-- <class class="box"> -->
+        <div class="card-info">
+          <a href="cadastro.html">
+            <h2>Infectados</h2>
+            <img src="../css/Imagens/tenor.gif" style="height: 140px; width: 230px;">
+            <p>Infectados são humanos que foram infectados e posteriormente mutados em horríveis novas formas pela
+              Infecção do cérebro de Cordyceps.</p>
+          </a>
+        </div>
+
+        <!-- <class class="box"> -->
+
+        <div class="card-info">
+          <a href="cadastro.html">
+            <h2>Joel</h2>
+            <img src="../css/Imagens/tumblr_10825c558d232af6b3070131c09b2698_87d79a35_540.gif"
+              style="height: 150px; width: 150px">
+            <p>"Eu lutei por muito tempo para sobreviver, e não importa o que aconteça, você continua encontrando algo
+              pelo que lutar."
+              <br> — Joel
+            </p>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <!-- video do tlou -->
+  <div class="parte_baixa">
+    <div class="video"><iframe width="700" height="400" src="https://www.youtube.com/embed/a22gIu112Ek"
+        title="Ellie e Joel discutindo na cabana cena completa The last of us remastered" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe></div>
+
+  </div>
+
+  <!-- musica do tlou -->
+  <div class="musica">
+    <h1>Música de Gustavo Santaolalla</h1>
+
+    <h3>Clique para escutar a melodia de THE LAST OF US:</h3>
+    </p>
+    <div class="musica2">
+      <audio controls loop>
+        <source src="../Música/The Last Of Us Theme Song ( no copyright) [GTS].mp3" type="audio/ogg">
+      </audio>
+    </div>
+
+    <img class="musica3" src="../css/Imagens/gustavo_santaolalla.jpg" usemap="#teste">
+
+    <!-- Deixar a imagem clicável -->
+    <map name="teste">
+      <area shape="default" alt="wikipedia_gustavo" href="https://pt.wikipedia.org/wiki/Gustavo_Santaolalla"
+        onclick="teste2()">
+    </map>
+    <div class="legenda">Gustavo Santaolalla compositor e Neil Druckman roteirista de The last of us</div>
+  </div>
+
+  <!-- Foto com meu primo -->
+  <div class="foto_primos">
+    <div class="foto_primos2">
+      <h2>Christian e Lucas</h2>
+      <img src="../css/Imagens/Lucao_Chris.jpg" style=" height: 550px;  width: 600px;">
+      <p>Aqui está eu e meu primo jogando The last of us</p>
+    </div>
+
+    <!-- Card ajuda -->
+    <div class="container">
+      <div class="card card-login">
+        <h2>Bem vindo novato, segue formulário para ajuda!</h2>
+        <div class="formulario">
+          <div class="campo">
+            <span>Pergunta:</span>
+            <input id="nome_input" type="text" placeholder="Sua pergunta...">
+          </div>
+          <div class="campo">
+            <span>Nome:</span>
+            <input id="email_input" type="text" placeholder="Seu nome aqui!">
+          </div>
+          <div class="campo">
+            <span>E-mail:</span>
+            <input id="senha_input" type="text" placeholder="meuemail@provedor.com">
+          </div>
+
+          <button class="botao2" onclick="cadastrar2()">Enviar pergunta</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- RODAPÉ -->
+  <footer>
+        
+        
+    <!-- <img class="footer-imagem" src="../css/Imagens/Naughty_Dog_logo.svg.png"> -->
+        <img class="footer-imagem" src="../css/Imagens/Logo_ps4.jpg">
+        <img class="footer-imagem2" src="../css/Imagens/Naughty_Dog_logo.svg.png ">
+        
+        
+</footer>
+
+
+</body>
+
+</html>
+<script>
+  function entrar() {
+    alert('Ok! Vamos lá sobrevivente')
+    window.location = 'cadastro.html'
+  }
+  function teste2() {
+    alert('Vamos conhecer um pouco mais do compositor')
+  }
+function cadastro2(){
+  alert('Obrigado pelo envio da pergunta!')
+}
+</script>
