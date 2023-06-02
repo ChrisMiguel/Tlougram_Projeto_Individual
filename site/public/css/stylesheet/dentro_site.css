@@ -109,9 +109,8 @@ body {
   
   
   .login {
-    height: var(--tamanho-login);
-    background-image: url('../Imagens/fundoMedidor/fundoMedidor.jpg');
-    background-size: cover;
+    display: block;
+    width: 400px;
   }
   
   .login .container {
@@ -181,29 +180,7 @@ body {
     justify-content: start;
   }
   
-  .botao {
-    cursor: grabbing;
-    font-family: "Barlow", sans-serif;
-    border: 0;
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 18px;
-    color: #000000;
-    background-color: #19b121;
-    width: 250px;
-    height: 50px;
-    align-self: center;
-    box-shadow: 10px 10px;
-    transition-duration: 0.6s;
-  }
   
-  .botao:hover {
-    color: #ffffffc5;
-  }
-  
-  .botao:active {
-    color: rgb(254, 255, 255);
-  }
   
   .loading-div {
     width: 50px;
@@ -241,54 +218,109 @@ body {
     font-size: 20px;
   }
   
-  .footer {
-    height: var(--tamanho-footer);
-    width: 100%;
-    background-color: #284D1B;
-    color: #fff;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-  
-  .footer h4 {
-    margin: 0;
-  }
-  
-  .footer .container {
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  .footer .container .version {
-    font-size: 12px;
-    font-weight: 800;
-  }
   
   .sobre_jogo {
     color: rgb(0, 0, 0);
   }
   
-  
-  
-  .footer .container .footer-imagem {
-    width: 200px;
-    height: 35px;
-    margin-right: 100%;
-    /* justify-content: start; */
-  
+.dash{
+  display: flex;
+}
+
+  .grafico{
+    background-color: #0000008f;
+    height: 300px;  
+    width: 600px;
+margin-top: 10%;
   }
   
-  .footer .container .footer-imagem2 {
-    width: 200px;
+
+  footer {
+    height: var(--tamanho-footer);
+    width: 100%;
+    background-color: #284D1B;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    font-size: 12px;
+    font-weight: 800;
+    
+  }
+  
+  footer img {
     height: 40px;
+    width: 180px;
+    margin-top: 6px;
+    margin-bottom: 1%;
+  }
+  
+  footer h4 {
+    margin: 0;
+  }
+  
+  
+  footer  .footer-image2 {
+    width: 100px;
+    height: 35px;
+    margin-right: 100%;
+    
   
   }
 
-  .grafico{
-    background-color: #0000006c;
+  .botao2 {
+    cursor: grabbing;
+    font-family: "Barlow", sans-serif;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000;
+    background-color: #ffffff;
+    width: 200px;
+    height: 50px;
+    align-self: center;
+    box-shadow: 10px 10px;
+    transition-duration: 0.6s;
+    margin: 15px;
+
   }
   
+  .botao2:hover {
+    color: #00d400a6;
+  }
+  
+  .botao2:active {
+    color: rgb(255, 0, 0);
+  }
+
+  .fundoMedidor{
+   display: flex; 
+   height: var(--tamanho-login);
+   background-size: cover;
+   background-image: url('../Imagens/fundoMedidor/fundoMedidor.jpg');
+  }
+
+  .janela{
+  padding: 10px;
+  }
+
+  .botaoLike{
+    width: 300px;
+margin: 5px;
+  }
+
+.imagensBotoes{
+  height: 100px;
+  width: 100px;
+  margin-left: 70%;
+}
+
+.botaoJoel{
+  width: 250px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+}

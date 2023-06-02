@@ -204,32 +204,9 @@ body {
   
   
   
-  footer {
-    height: var(--tamanho-footer);
-    width: 100%;
-    background-color: #284D1B;
-    color: #fff;
-  
-    width: 100%;
-  
-  }
+ 
   
   
-  footer h4 {
-    margin: 0;
-  }
-  
-  footer .container {
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  footer .container .version {
-    font-size: 12px;
-    font-weight: 800;
-  }
   
   
   .card-info {
@@ -462,24 +439,37 @@ color: #fff;
   
   }
 
+  footer {
+    height: var(--tamanho-footer);
+    width: 100%;
+    background-color: #284D1B;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    font-size: 12px;
+    font-weight: 800;
+    
+  }
+  
   footer img {
-    height: 50px;
-    width: 190px;
+    height: 40px;
+    width: 180px;
+    margin-top: 6px;
+  }
+  
+  footer h4 {
+    margin: 0;
   }
   
   
-
- footer .footer-imagem {
-    width: 200px;
+  footer  .footer-image2 {
+    width: 100px;
     height: 35px;
     margin-right: 100%;
-    /* justify-content: start; */
+    
   
   }
-  
-  footer .container .footer-imagem2 {
-    width: 200px;
-    height: 40px;
-  }
-  
 

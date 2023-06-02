@@ -1,221 +1,220 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Barlow', 'Poppins', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #3D6235
-  }
-  
-  :root {
-    --tamanho-header: 50px;
-    --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-    --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-    --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-    --tamanho-footer: 65px;
-  }
-  
-  .container {
-    display: flex;
-    width: 80%;
-    margin: auto;
-  
-  }
-  
-  .header {
-    height: var(--tamanho-header);
-    border-bottom: 2px solid #000000;
-  }
-  
-  .header .container .navbar ul {
-    list-style: none; 
-  }
-  
-  .header .container {
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .header a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    /* text-shadow: #b4a9a9;  */
-  
-  }
-  
-  .navbar {
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style: none;
-    color: #000000;
-  }
-  
-  /* unvisited link */
-  a:link {
-    color: rgb(0, 0, 0);
-    animation-delay: 0.5s;
-    /* transition-delay: 0.1s;  */
-    transition-duration: 0.6s;
-  
-  
-  }
-  
-  /* visited link */
-  a:visited {
-    color: rgb(3, 3, 3);
-  }
-  
-  /* mouse over link */
-  a:hover {
-    color: rgb(64, 231, 13);
-  }
-  
-  /* selected link */
-  a:active {
-    color: rgb(49, 168, 13);
-  }
-  
-  li:hover {
-    color: rgb(49, 168, 13);
-  }
-  
-  li:active {
-    color: rgb(49, 168, 13);
-  }
-  
-  li:link {
-    color: rgb(0, 0, 0);
-  }
-  
-  li:visited {
-    color: rgb(3, 3, 3);
-  }
-  
-  .agora {
-    font-weight: 800;
-  }
-  
-  footer img{
-    height: 50px ;
-    width: 190px ;
-  }
-  .titulo {
-    color: #000000;
-    width: fit-content;
-    font-weight: 500;
-  }
-  
-  
-  .header h1 {
-    margin: 0;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', 'Poppins', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #3D6235
+}
 
-  footer {
-    height: var(--tamanho-footer);
-    width: 100%;
-    background-color: #284D1B;
-    color: #fff;
+:root {
+  --tamanho-header: 50px;
+  --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-footer: 65px;
+}
 
-    width: 100%;
-  
-  }
+.container {
+  display: flex;
+  width: 80%;
+  margin: auto;
 
+}
+
+.header {
+  height: var(--tamanho-header);
+  border-bottom: 2px solid #000000;
+}
+
+.header .container .navbar ul {
+  list-style: none;
+}
+
+.header .container {
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  /* text-shadow: #b4a9a9;  */
+
+}
+
+.navbar {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  color: #000000;
+}
+
+/* unvisited link */
+a:link {
+  color: rgb(0, 0, 0);
+  animation-delay: 0.5s;
+  /* transition-delay: 0.1s;  */
+  transition-duration: 0.6s;
+
+
+}
+
+/* visited link */
+a:visited {
+  color: rgb(3, 3, 3);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(64, 231, 13);
+}
+
+/* selected link */
+a:active {
+  color: rgb(49, 168, 13);
+}
+
+li:hover {
+  color: rgb(49, 168, 13);
+}
+
+li:active {
+  color: rgb(49, 168, 13);
+}
+
+li:link {
+  color: rgb(0, 0, 0);
+}
+
+li:visited {
+  color: rgb(3, 3, 3);
+}
+
+.agora {
+  font-weight: 800;
+}
+
+
+.titulo {
+  color: #000000;
+  width: fit-content;
+  font-weight: 500;
+}
+
+
+.header h1 {
+  margin: 0;
+}
+
+
+
+.sobre_jogo {
+  color: rgb(0, 0, 0);
+}
+
+.sobre_jogo2 .container {
+  flex-direction: column;
+  background-image: url("../Imagens/Segredos/Fundo_segredo.jpg");
+  background-color: rgb(255, 255, 255);
+  height: var(--tamanho-simulador);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 1000px;
+  width: 100%;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.fundo_letra {
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #0000009d;
+}
+footer {
+  height: var(--tamanho-footer);
+  width: 100%;
+  background-color: #284D1B;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  font-size: 12px;
+  font-weight: 800;
   
-  footer h4 {
-    margin: 0;
-  }
+}
+
+footer img {
+  height: 40px;
+  width: 180px;
+  margin-top: 6px;
+}
+
+footer h4 {
+  margin: 0;
+}
+
+
+footer  .footer-image2 {
+  width: 100px;
+  height: 35px;
+  margin-right: 100%;
   
-  footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
-  }
-  
-  footer {
-    font-size: 12px;
-    font-weight: 800;
-  }
-  
-  .sobre_jogo {
-    color: rgb(0, 0, 0);
-  }
-  
-  .sobre_jogo2 .container {
-    flex-direction: column;
-    background-image: url("../Imagens/Segredos/Fundo_segredo.jpg");
-    background-color: rgb(255, 255, 255);
-    height: var(--tamanho-simulador);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    height: 1000px;
-    width: 100%;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  
-  .fundo_letra {
-    color: rgb(255, 255, 255);
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #0000009d;
-  }
-  
- 
-  footer .container .footer-imagem {
-    width: 200px;
-    height: 35px;
-    margin-right: 100%;
-    /* justify-content: start; */
-  
-  }
-  
+
+}
+
 .foto_segredo1 {
-    width: 400px;
-    height: 250px;
-    margin-left: 35%;
+  width: 400px;
+  height: 250px;
+  margin-left: 35%;
 }
-  
-.foto_segredo2 {
-    width: 330px;
-    height: 200px;
 
-    align-items: center;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    
-    box-shadow: 3px 3px 8px #000000;
-    align-items: center;
-    justify-content: center;
+.foto_segredo2 {
+  width: 330px;
+  height: 200px;
+
+  align-items: center;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 3px 3px 8px #000000;
+  align-items: center;
+  justify-content: center;
 }
-.img_carrossel{
-position: absolute;
-display: flex;
-justify-content: space-between;
-align-self: center;
-width: 100%;
-height: 20px;
-margin-top: 50px;
+
+.img_carrossel {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 100%;
+  height: 20px;
+  margin-top: 50px;
 }
-.seta_slide{
-cursor: pointer;
+
+.seta_slide {
+  cursor: pointer;
 }
-.slides{
+
+.slides {
   width: 80%;
   height: 70vh;
 }
 
-.all{
+.all {
   /* background-color: rgba(0, 0, 0, 0.507); */
   display: flex;
   justify-content: center;
@@ -226,7 +225,7 @@ cursor: pointer;
 
 }
 
-.img_cortes{
+.img_cortes {
   margin-left: 145px;
   margin-top: 130px;
   width: 70%;

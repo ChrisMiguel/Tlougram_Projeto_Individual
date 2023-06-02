@@ -242,45 +242,31 @@ body {
     font-size: 20px;
   }
   
-  footer {
-    height: var(--tamanho-footer);
-    width: 100%;
-    background-color: #284D1B;
-    color: #fff;
-  
-    width: 100%;
-  
-  }
-  
-  
-  footer h4 {
-    margin: 0;
-  }
-  
-  footer .container {
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  footer .container .version {
-    font-size: 12px;
-    font-weight: 800;
-  }
-  
+
   .sobre_jogo {
     color: rgb(0, 0, 0);
   }
   
   
+ 
   
-  footer .container .footer-imagem {
-    width: 200px;
-    height: 35px;
-    margin-right: 100%;
-    /* justify-content: start; */
+  footer img {
+    height: 40px;
+    width: 180px;
+    margin-top: 6px;
+    margin-bottom: 1%;
+  }
   
+  footer h4 {
+    margin: 0;
   }
   
   
+  footer  .footer-image2 {
+    width: 100px;
+    height: 35px;
+    margin-right: 100%;
+    
+  
+  }
+ 
