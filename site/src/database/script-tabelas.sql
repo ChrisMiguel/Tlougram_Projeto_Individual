@@ -24,6 +24,16 @@ CREATE TABLE aviso (
 	fk_usuario INT,
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
+
+CREATE TABLE personagens (
+id Int primary key auto_increment,
+nome varchar(45),
+email varchar(60),
+curtidas int,
+fkUsuario int,
+foreign key (fkUsuario) references usuario(id)
+); 
+
 -- create table aquario (
 -- /* em nossa regra de negócio, um aquario tem apenas um sensor */
 -- 	id INT PRIMARY KEY AUTO_INCREMENT,
