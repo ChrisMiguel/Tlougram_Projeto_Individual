@@ -31,8 +31,76 @@ function cadastrar(nome, email, senha) {
     return database.executar(instrucao);
 }
 
+function CurtirJoel(nome) {
+   
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO personagens (Joel) VALUES (${nome});
+    `;
+    
+    return database.executar(instrucao);
+
+
+}
+function CurtirEllie(nome) {
+    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO personagens (Ellie) VALUES (${nome});
+    `;
+   
+    return database.executar(instrucao);
+
+
+}
+
+function CurtirBill(nome) {
+   
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO personagens (Bill) VALUES (${nome});
+    `;
+    
+    return database.executar(instrucao);
+
+
+}
+
+function CurtirTess(nome) {
+   
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO personagens (Tess) VALUES (${nome});
+    `;
+   
+    return database.executar(instrucao);
+
+
+}
+function CurtirInfectados(nome) {
+  
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO personagens (Infectados) VALUES (${nome});
+    `;
+    
+    return database.executar(instrucao);
+
+
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    CurtirBill,
+    CurtirTess,
+    CurtirJoel,
+    CurtirInfectados,
+    CurtirEllie
 };

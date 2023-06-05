@@ -94,9 +94,123 @@ function cadastrar(req, res) {
     }
 }
 
+function CurtirBill(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var nome = req.body.billServer;
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.CurtirBill(nome)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+    function CurtirEllie(req, res) {
+        // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+        var nome = req.body.ellieServer;
+            
+            // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+            usuarioModel.CurtirEllie(nome)
+                .then(
+                    function (resultado) {
+                        res.json(resultado);
+                    }
+                ).catch(
+                    function (erro) {
+                        console.log(erro);
+                        console.log(
+                            "\nHouve um erro ao realizar o cadastro! Erro: ",
+                            erro.sqlMessage
+                        );
+                        res.status(500).json(erro.sqlMessage);
+                    }
+                );
+        }
+
+        function CurtirInfectados(req, res) {
+            // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+            var nome = req.body.infectadoServer;
+                
+                // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+                usuarioModel.CurtirInfectados(nome)
+                    .then(
+                        function (resultado) {
+                            res.json(resultado);
+                        }
+                    ).catch(
+                        function (erro) {
+                            console.log(erro);
+                            console.log(
+                                "\nHouve um erro ao realizar o cadastro! Erro: ",
+                                erro.sqlMessage
+                            );
+                            res.status(500).json(erro.sqlMessage);
+                        }
+                    );
+            }
+            function CurtirJoel(req, res) {
+                // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+                var nome = req.body.joelServer;
+                    
+                    // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+                    usuarioModel.CurtirJoel(nome)
+                        .then(
+                            function (resultado) {
+                                res.json(resultado);
+                            }
+                        ).catch(
+                            function (erro) {
+                                console.log(erro);
+                                console.log(
+                                    "\nHouve um erro ao realizar o cadastro! Erro: ",
+                                    erro.sqlMessage
+                                );
+                                res.status(500).json(erro.sqlMessage);
+                            }
+                        );
+                }
+
+                function CurtirTess(req, res) {
+                    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+                    var nome = req.body.tessServer;
+                        
+                        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+                        usuarioModel.CurtirTess(nome)
+                            .then(
+                                function (resultado) {
+                                    res.json(resultado);
+                                }
+                            ).catch(
+                                function (erro) {
+                                    console.log(erro);
+                                    console.log(
+                                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                                        erro.sqlMessage
+                                    );
+                                    res.status(500).json(erro.sqlMessage);
+                                }
+                            );
+                    }
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
-    testar
+    testar,
+    CurtirBill,
+    CurtirTess,
+    CurtirJoel,
+    CurtirInfectados,
+    CurtirEllie
 }
+
