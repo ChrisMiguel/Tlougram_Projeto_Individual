@@ -25,6 +25,7 @@ CREATE TABLE aviso (
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
 
+<<<<<<< HEAD
 CREATE TABLE personagens (
 id Int primary key auto_increment,
 nome varchar(45),
@@ -33,6 +34,9 @@ curtidas int,
 fkUsuario int,
 foreign key (fkUsuario) references usuario(id)
 ); 
+=======
+
+>>>>>>> 9c803bea1259d99908bd98cdf1dc17f907846e34
 
 -- create table aquario (
 -- /* em nossa regra de negócio, um aquario tem apenas um sensor */

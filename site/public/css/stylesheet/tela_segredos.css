@@ -141,6 +141,7 @@ li:visited {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: #0000009d;
 }
+
 footer {
   height: var(--tamanho-footer);
   width: 100%;

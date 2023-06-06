@@ -1,324 +1,324 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Barlow', 'Poppins', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #3D6235
-  }
-  
-  :root {
-    --tamanho-header: 50px;
-    --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-    --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-    --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-    --tamanho-footer: 65px;
-  }
-  
-  .container {
-    display: flex;
-    width: 80%;
-    margin: auto;
-  
-  }
-  
-  .header {
-    height: var(--tamanho-header);
-    border-bottom: 2px solid #000000;
-  }
-  
-  .header .container .navbar ul {
-    list-style: none; 
-  }
-  
-  .header .container {
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .header a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    /* text-shadow: #b4a9a9;  */
-  
-  }
-  
-  .navbar {
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style: none;
-    color: #000000;
-  }
-  
-  /* unvisited link */
-  a:link {
-    color: rgb(0, 0, 0);
-    animation-delay: 0.5s;
-    /* transition-delay: 0.1s;  */
-    transition-duration: 0.6s;
-  
-  
-  }
-  
-  /* visited link */
-  a:visited {
-    color: rgb(3, 3, 3);
-  }
-  
-  /* mouse over link */
-  a:hover {
-    color: rgb(64, 231, 13);
-  }
-  
-  /* selected link */
-  a:active {
-    color: rgb(49, 168, 13);
-  }
-  
-  li:hover {
-    color: rgb(49, 168, 13);
-  }
-  
-  li:active {
-    color: rgb(49, 168, 13);
-  }
-  
-  li:link {
-    color: rgb(0, 0, 0);
-  }
-  
-  li:visited {
-    color: rgb(3, 3, 3);
-  }
-  
-  .agora {
-    font-weight: 800;
-  }
-  
-  
-  .titulo {
-    color: #000000;
-    width: fit-content;
-    font-weight: 500;
-  }
-  
-  .header h1 {
-    margin: 0;
-  }
-  
-  
-  .login {
-    display: block;
-    width: 400px;
-  }
-  
-  .login .container {
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-  }
-  
-  .card {
-    width: 40%;
-    background-color: #284d1ba4;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    color: rgb(255, 255, 255);
-    row-gap: 10px;
-    box-shadow: 10px 15px #000000b0;
-  }
-  
-  .card-cadastro {
-    height: 90%;
-    width: 40%;
-  }
-  
-  .card-login {
-    height: 80%;
-  }
-  
-  .card h2 {
-    margin: 0;
-    font-size: 30px;
-  
-  }
-  
-  .formulario {
-    display: flex;
-    height: 90%;
-    width: 80%;
-    justify-content: space-around;
-    flex-direction: column;
-    /* box-shadow: 800px 800px 800px #00000056; */
-    /* outline: none; */
-    /* box-sizing: border-box; */
-  }
-  
-  
-  .formulario span {
-    font-size: 15px;
-    font-weight: 800;
-    /* box-shadow: 10px 10px 10px #000000; */
-  }
-  
-  .formulario input {
-    border: 2px solid #00ff2a;
-    height: 30px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 10px 15px #000000b0;
-  }
-  
-  .campo {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-  }
-  
-  
-  
-  .loading-div {
-    width: 50px;
-    display: none;
-  }
-  
-  .loading-div img {
-    height: 50px;
-    width: 50px;
-  }
-  
-  #div_erros_login {
-    display: none
-  }
-  
-  .alerta_erro {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .card_erro {
-    display: none;
-    background-color: #284D1B;
-    color: rgb(255, 255, 255);
-    width: 230px;
-    position: fixed;
-    border-radius: 4px;
-    border: #000000 3px solid;
-    padding: 10px;
-    margin-right: 10%;
-  }
-  
-  .card_erro #mensagem_erro {
-    font-weight: 500;
-    font-size: 20px;
-  }
-  
-  
-  .sobre_jogo {
-    color: rgb(0, 0, 0);
-  }
-  
-.dash{
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', 'Poppins', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #3D6235
+}
+
+:root {
+  --tamanho-header: 50px;
+  --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-footer: 65px;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+
+}
+
+.header {
+  height: var(--tamanho-header);
+  border-bottom: 2px solid #000000;
+}
+
+.header .container .navbar  {
+  list-style: none;
+}
+
+.header .container {
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  /* text-shadow: #b4a9a9;  */
+
+}
+
+.navbar {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  color: #000000;
+}
+
+/* unvisited link */
+a:link {
+  color: rgb(0, 0, 0);
+  animation-delay: 0.5s;
+  /* transition-delay: 0.1s;  */
+  transition-duration: 0.6s;
+
+
+}
+
+/* visited link */
+a:visited {
+  color: rgb(3, 3, 3);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(64, 231, 13);
+}
+
+/* selected link */
+a:active {
+  color: rgb(49, 168, 13);
+}
+
+li:hover {
+  color: rgb(49, 168, 13);
+}
+
+li:active {
+  color: rgb(49, 168, 13);
+}
+
+li:link {
+  color: rgb(0, 0, 0);
+}
+
+li:visited {
+  color: rgb(3, 3, 3);
+}
+
+.agora {
+  font-weight: 800;
+}
+
+
+.titulo {
+  color: #000000;
+  width: fit-content;
+  font-weight: 500;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+
+.login {
+  display: block;
+  width: 400px;
+}
+
+.login .container {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.card {
+  width: 40%;
+  background-color: #284d1ba4;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+  row-gap: 10px;
+  box-shadow: 10px 15px #000000b0;
+}
+
+.card-cadastro {
+  height: 90%;
+  width: 40%;
+}
+
+.card-login {
+  height: 80%;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 30px;
+
+}
+
+.formulario {
+  display: flex;
+  height: 90%;
+  width: 80%;
+  justify-content: space-around;
+  flex-direction: column;
+  /* box-shadow: 800px 800px 800px #00000056; */
+  /* outline: none; */
+  /* box-sizing: border-box; */
+}
+
+
+.formulario span {
+  font-size: 15px;
+  font-weight: 800;
+  /* box-shadow: 10px 10px 10px #000000; */
+}
+
+.formulario input {
+  border: 2px solid #00ff2a;
+  height: 30px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 10px 15px #000000b0;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+
+
+.loading-div {
+  width: 50px;
+  display: none;
+}
+
+.loading-div img {
+  height: 50px;
+  width: 50px;
+}
+
+#div_erros_login {
+  display: none
+}
+
+.alerta_erro {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card_erro {
+  display: none;
+  background-color: #284D1B;
+  color: rgb(255, 255, 255);
+  width: 230px;
+  position: fixed;
+  border-radius: 4px;
+  border: #000000 3px solid;
+  padding: 10px;
+  margin-right: 10%;
+}
+
+.card_erro #mensagem_erro {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+
+.sobre_jogo {
+  color: rgb(0, 0, 0);
+}
+
+.dash {
   display: flex;
 }
 
-  .grafico{
-    background-color: #0000008f;
-    height: 300px;  
-    width: 600px;
-margin-top: 10%;
-  }
-  
+.grafico {
+  background-color: #0000008f;
+  height: 300px;
+  width: 600px;
+  margin-top: 10%;
+}
 
-  footer {
-    height: var(--tamanho-footer);
-    width: 100%;
-    background-color: #284D1B;
-    color: #fff;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
-    font-size: 12px;
-    font-weight: 800;
-    
-  }
-  
-  footer img {
-    height: 40px;
-    width: 180px;
-    margin-top: 6px;
-    margin-bottom: 1%;
-  }
-  
-  footer h4 {
-    margin: 0;
-  }
-  
-  
-  footer  .footer-image2 {
-    width: 100px;
-    height: 35px;
-    margin-right: 100%;
-    
-  
-  }
 
-  .botao2 {
-    cursor: grabbing;
-    font-family: "Barlow", sans-serif;
-    border: 0;
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 18px;
-    color: #000000;
-    background-color: #ffffff;
-    width: 200px;
-    height: 50px;
-    align-self: center;
-    box-shadow: 10px 10px;
-    transition-duration: 0.6s;
-    margin: 15px;
+footer {
+  height: var(--tamanho-footer);
+  width: 100%;
+  background-color: #284D1B;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  font-size: 12px;
+  font-weight: 800;
 
-  }
-  
-  .botao2:hover {
-    color: #00d400a6;
-  }
-  
-  .botao2:active {
-    color: rgb(255, 0, 0);
-  }
+}
 
-  .fundoMedidor{
-   display: flex; 
-   height: var(--tamanho-login);
-   background-size: cover;
-   background-image: url('../Imagens/fundoMedidor/fundoMedidor.jpg');
-  }
+footer img {
+  height: 40px;
+  width: 180px;
+  margin-top: 6px;
+  margin-bottom: 1%;
+}
 
-  .janela{
+footer h4 {
+  margin: 0;
+}
+
+
+footer .footer-image2 {
+  width: 100px;
+  height: 35px;
+  margin-right: 100%;
+
+
+}
+
+.botao2 {
+  cursor: grabbing;
+  font-family: "Barlow", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+  background-color: #ffffff;
+  width: 200px;
+  height: 50px;
+  align-self: center;
+  box-shadow: 10px 10px;
+  transition-duration: 0.6s;
+  margin: 15px;
+
+}
+
+.botao2:hover {
+  color: #00d400a6;
+}
+
+.botao2:active {
+  color: rgb(255, 0, 0);
+}
+
+.fundoMedidor {
+  display: flex;
+  height: var(--tamanho-login);
+  background-size: cover;
+  background-image: url('../Imagens/fundoMedidor/fundoMedidor.jpg');
+}
+
+.janela {
   padding: 10px;
-  }
+}
 
-  .botaoLike{
-    width: 300px;
-margin: 5px;
-  }
+.botaoLike {
+  width: 300px;
+  margin: 5px;
+}
 
-.imagensBotoes{
+.imagensBotoes {
   height: 100px;
   width: 100px;
   margin-left: 70%;
 }
 
-.botaoJoel{
+.botaoJoel {
   width: 250px;
   height: 100px;
   display: flex;

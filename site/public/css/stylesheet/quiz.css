@@ -136,10 +136,10 @@ ul {
   padding: 0;
 }
 
-ul li {
+ ul .answer {
   font-size: 1.2rem;
   margin: 1rem 0;
-}
+} 
 
 ul li label {
   cursor: pointer;
@@ -286,7 +286,20 @@ button {
   color: rgb(0, 0, 0);
 }
 
-
+footer {
+  height: var(--tamanho-footer);
+  width: 100%;
+  background-color: #284D1B;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  font-size: 12px;
+  font-weight: 800;
+  
+}
 
 
 footer img {
