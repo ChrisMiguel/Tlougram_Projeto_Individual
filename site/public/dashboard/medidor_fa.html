@@ -326,7 +326,7 @@
         console.log('iniciando plotagem do gráfico...');
 
         // Criando estrutura para plotar gráfico - labels
-        let labels = [];
+        let labels = ["Joel", "Ellie", "Bill", "Infectados", "Tess"];
 
         // Criando estrutura para plotar gráfico - dados
         let dados = {
@@ -386,12 +386,18 @@
         // Inserindo valores recebidos em estrutura para plotar o gráfico
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
-            labels.push(registro.momento_grafico);
-            dados.datasets[0].data.push(registro.Ellie);
-            dados.datasets[1].data.push(registro.Joel);
-            dados.datasets[2].data.push(registro.Bill);
-            dados.datasets[3].data.push(registro.Infectados);
-            dados.datasets[4].data.push(registro.Tess);
+            // labels.push(registro.momento_grafico);
+            dados.datasets[0].data[0] = registro.Joel;
+            dados.datasets[1].data[1] = registro.Ellie;
+            dados.datasets[2].data[2] = registro.Tess;
+            dados.datasets[3].data[3] = registro.Bill;
+            dados.datasets[4].data[4] = registro.Infectados;
+
+            // dados.datasets[0].data.push(registro.Joel);
+            // dados.datasets[1].data.push(registro.Ellie);
+            // dados.datasets[2].data.push(registro.Tess);
+            // dados.datasets[3].data.push(registro.Bill);
+            // dados.datasets[4].data.push(registro.Infectados);
             
         }
         
@@ -415,7 +421,7 @@
         config
         );
         
-        setTimeout(() => atualizarGrafico(idUsuario, dados, myChart), 2000);
+        // setTimeout(() => atualizarGrafico(idUsuario, dados, myChart), 2000);
         
     
 }
@@ -425,67 +431,67 @@
     
     //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
     //     Para ajustar o "select", ajuste o comando sql em src/models
-    function atualizarGrafico(idUsuario, dados, myChart) {
+    // function atualizarGrafico(idUsuario, dados, myChart) {
 
 
 
-        fetch(`/medidas/tempo-real/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
-            if (response.ok) {
-                response.json().then(function (novoRegistro) {
+    //     fetch(`/medidas/tempo-real/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
+    //         if (response.ok) {
+    //             response.json().then(function (novoRegistro) {
 
-                    // obterdados(idUsuario);
+    //                 // obterdados(idUsuario);
 
-                    // alertar(novoRegistro, idAquario);
-                    console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
-                    console.log(`Dados atuais do gráfico:`);
-                    console.log(dados);
+    //                 // alertar(novoRegistro, idAquario);
+    //                 console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
+    //                 console.log(`Dados atuais do gráfico:`);
+    //                 console.log(dados);
 
-                    let avisoCaptura = document.getElementById(`avisoCaptura${idUsuario}`)
+    //                 let avisoCaptura = document.getElementById(`avisoCaptura${idUsuario}`)
                     
 
 
-                    if (novoRegistro[0].momento_grafico == dados.labels[dados.labels.length - 1]) {
-                        console.log("---------------------------------------------------------------")
-                        console.log("Como não há dados novos para captura, o gráfico não atualizará.")
-                        console.log("Horário do novo dado capturado:")
-                        console.log(novoRegistro[0].momento_grafico)
-                        console.log("Horário do último dado capturado:")
-                        console.log(dados.labels[dados.labels.length - 1])
-                        console.log("---------------------------------------------------------------")
-                    } else {
+    //                 if (novoRegistro[0].momento_grafico == dados.labels[dados.labels.length - 1]) {
+    //                     console.log("---------------------------------------------------------------")
+    //                     console.log("Como não há dados novos para captura, o gráfico não atualizará.")
+    //                     console.log("Horário do novo dado capturado:")
+    //                     console.log(novoRegistro[0].momento_grafico)
+    //                     console.log("Horário do último dado capturado:")
+    //                     console.log(dados.labels[dados.labels.length - 1])
+    //                     console.log("---------------------------------------------------------------")
+    //                 } else {
 
-                        dados.datasets[0].data.shift();  // apagar o primeiro de umidade
-                        dados.datasets[0].data.push(novoRegistro[0].Ellie); // incluir uma nova medida de umidade
+    //                     dados.datasets[0].data.shift();  // apagar o primeiro de umidade
+    //                     dados.datasets[0].data.push(novoRegistro[0].Joel); // incluir uma nova medida de umidade
 
-                        dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
-                        dados.datasets[1].data.push(novoRegistro[0].Joel); // incluir uma nova medida de temperatura
-
-
-                        dados.datasets[2].data.shift();  // apagar o primeiro de temperatura
-                        dados.datasets[2].data.push(novoRegistro[0].Bill);
+    //                     dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
+    //                     dados.datasets[1].data.push(novoRegistro[0].Ellie); // incluir uma nova medida de temperatura
 
 
-                        dados.datasets[3].data.shift();  // apagar o primeiro de temperatura
-                        dados.datasets[3].data.push(novoRegistro[0].Tess);
+    //                     dados.datasets[2].data.shift();  // apagar o primeiro de temperatura
+    //                     dados.datasets[2].data.push(novoRegistro[0].Bill);
 
-                        dados.datasets[4].data.shift();  // apagar o primeiro de temperatura
-                        dados.datasets[4].data.push(novoRegistro[0].Infectados);
-                        myChart.update();
-                    }
 
-                    // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idUsuario, dados, myChart), 2000);
-                });
-            } else {
-                console.error('Nenhum dado encontrado ou erro na API');
+    //                     dados.datasets[3].data.shift();  // apagar o primeiro de temperatura
+    //                     dados.datasets[3].data.push(novoRegistro[0].Infectados);
 
-                // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                proximaAtualizacao = setTimeout(() => atualizarGrafico(idUsuario, dados, myChart), 2000);
-            }
-        })
-            .catch(function (error) {
-                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-            });
+    //                     dados.datasets[4].data.shift();  // apagar o primeiro de temperatura
+    //                     dados.datasets[4].data.push(novoRegistro[0].Tess);
+    //                     myChart.update();
+    //                 }
 
-    }
+    //                 // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+    //                 proximaAtualizacao = setTimeout(() => atualizarGrafico(idUsuario, dados, myChart), 2000);
+    //             });
+    //         } else {
+    //             console.error('Nenhum dado encontrado ou erro na API');
+
+    //             // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+    //             proximaAtualizacao = setTimeout(() => atualizarGrafico(idUsuario, dados, myChart), 2000);
+    //         }
+    //     })
+    //         .catch(function (error) {
+    //             console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+    //         });
+
+    // }
 </script>
