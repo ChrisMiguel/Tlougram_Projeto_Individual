@@ -29,5 +29,7 @@ app.listen(PORTA, function () {
     Você está rodando sua aplicação em Ambiente de ${process.env.AMBIENTE_PROCESSO} \n
     \t\tSe "desenvolvimento", você está se conectando ao banco LOCAL (MySQL Workbench). \n
     \t\tSe "producao", você está se conectando ao banco REMOTO (SQL Server em nuvem Azure) \n
-    \t\t\t\tPara alterar o ambiente, comente ou descomente as linhas 1 ou 2 no arquivo 'app.js'`);
+    \t\tPara alterar o ambiente, comente ou descomente as linhas 1 ou 2 no arquivo 'app.js'
+    Você é lindo!`);
+    
 });

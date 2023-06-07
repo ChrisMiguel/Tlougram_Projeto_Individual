@@ -1,8 +1,8 @@
 const data = [
     {
-        question: "Qual infectado já está tranformado a anos?",
+        question: "Qual desses infectados já está tranformado a anos?",
         a: "Joel",
-        b: "corredor",
+        b: "Corredor",
         c: "Estalador",
         d: "Crowler",
         e: "Baiacu/verme",
@@ -11,7 +11,7 @@ const data = [
 
     },
     {
-        question: "Quem tem anticorpos no corpo?",
+        question: "Qual dos personagens abaixo tem o anticorpo que combate a doença cordyceps presente no jogo?",
         a: "Tess",
         b: "Bill",
         c: "Tommy",
