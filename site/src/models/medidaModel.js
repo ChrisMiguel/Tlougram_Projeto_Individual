@@ -1,22 +1,22 @@
 var database = require("../database/config");
 
-function buscarUltimasMedidas(idUsuario, limite_linhas) {
+function buscarUltimasMedidas() {
 
     
     instrucaoSql = ''
 
-    if (process.env.AMBIENTE_PROCESSO == "producao") {
-        instrucaoSql = `select top ${limite_linhas}
-        dht11_temperatura as temperatura, 
-        dht11_umidade as umidade,  
-                        momento,
-                        FORMAT(momento, 'HH:mm:ss') as momento_grafico
-                    from medida
-                    where fk_aquario = ${idUsuario}
-                    order by id desc`;
-
-    } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select count(joel) Joel, count(ellie) Ellie, count(bill) Bill, count(infectados) Infectados, count(tess) Tess from personagens where fkusuario = ${idUsuario};
+    // if (process.env.AMBIENTE_PROCESSO == "producao") {
+    //     instrucaoSql = `select top ${limite_linhas}
+    //     dht11_temperatura as temperatura, 
+    //     dht11_umidade as umidade,  
+    //                     momento,
+    //                     FORMAT(momento, 'HH:mm:ss') as momento_grafico
+    //                 from medida
+    //                 where fk_aquario = ${idUsuario}
+    //                 order by id desc`;
+// }
+     if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
+        instrucaoSql = `select count(joel) as Joel, count(ellie) as Ellie, count(bill) as Bill, count(infectados) as Infectados, count(tess) as Tess from personagens join usuario on usuario.id = fkusuario;
        `;
        
     } else {

@@ -10,7 +10,7 @@
 
 
     <script src="../js/funcoes.js"></script>
-
+    
 
     <link rel="icon" href="../css/Imagens/icone.png">
     <link rel="stylesheet" href="../css/stylesheet/dentro_site.css">
@@ -18,6 +18,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -95,7 +96,7 @@
 
 </html>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 <script>
 
@@ -107,6 +108,10 @@
     var likeEllie = 0;
     var likeBill = 0;
     var idUsuario = sessionStorage.ID_USUARIO;
+
+    let proximaAtualizacao;
+    window.onload = obterDadosGrafico();
+
 
     function CurtirTess(idUsuario) {
         likeTess = 1;
@@ -285,66 +290,26 @@
         return false;
     }
 
-    const ctx = document.getElementById('myChart');
 
-    //   new Chart(ctx, {
-    //     type: 'bar',
-    //     data: {
-    //       labels: ['Joel', 'Ellie', 'Infectados', 'Bill', 'Tess'],
-    //       datasets: [{
-    //         label: '# of Votes',
-    //         data: [idUsuario],
-    //         backgroundColor: [
-    //       'rgba(	0,255,0)',
-    //       'rgba(	0,255,0)',
-    //       'rgba(	0,255,0)',
-    //       'rgba(	0,255,0)',
-    //       'rgba(	0,255,0)',
-    //       'rgba(	0,255,0)',
-    //       'rgba(	0,255,0)'
-    //     ],
-    //     borderColor: [
-    //       'rgb(255,255,255)',
-    //       'rgb(255,255,255)',
-    //       'rgb(255,255,255)',
-    //       'rgb(255,255,255)',
-    //       'rgb(255,255,255)',
-    //       'rgb(255,255,255)',
-    //       'rgb(255,255,255)'
-    //     ],
-    //         borderWidth: 3
-    //       }]
-    //     },
-    //     options: {
-    //       scales: {
-    //         y: {
-    //           beginAtZero: true
-    //         }
-    //       }
-    //     }
-    //   });
+    function obterDadosGrafico() {
+        var idUsuario = Number(sessionStorage.ID_USUARIO);
+        obterDadosGrafico(idUsuario)
 
-      const config = {
-  type: 'bar',
-  data,
-  options: {
-    indexAxis: 'y',
-  }
+    }
 
+    function obterDadosGrafico() {
+
+        // alterarTitulo(idUsuario)
+        if (proximaAtualizacao != undefined) {
+            clearTimeout(proximaAtualizacao);
         }
-      ;
-
-    function obterDadosGrafico(idUsuario) {
-
-        alterarTitulo(idUsuario)
-
-        fetch(`/medidas/ultimas/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
+        fetch(`/medidas/ultimas/`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     resposta.reverse();
 
-                    plotarGrafico(resposta, idUsuario);
+                    plotarGrafico(resposta);
 
                 });
             } else {
@@ -356,7 +321,7 @@
             });
     }
 
-    function plotarGrafico(resposta, idUsuario) {
+    function plotarGrafico(resposta) {
 
         console.log('iniciando plotagem do gráfico...');
 
@@ -367,54 +332,97 @@
         let dados = {
             labels: labels,
             datasets: [{
-                label: 'Likes',
-                data: [],
+                label: 'Joel',
+                backgroundColor: 'purple',
+                borderColor: 'purple',
                 fill: false,
-                borderColor: 'rgb(75, 192, 192)',
+                data: [0
+
+                ],
                 tension: 0.1
             },
-            ]
-        };
+            {
+                label: 'Ellie',
+                backgroundColor: 'green',
+                borderColor: 'green',
+                fill: false,
+                data: [1
 
-        console.log('----------------------------------------------')
-        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
-        console.log(resposta)
+                ],
+                tension: 0.1
+            },
+            {
+                label: 'Bill',
+                backgroundColor: 'darkorange',
+                borderColor: 'darkorange',
+                fill: false,
+                data: [1
 
-        // Inserindo valores recebidos em estrutura para plotar o gráfico
-        for (i = 0; i < resposta.length; i++) {
-            var registro = resposta[i];
-            labels.push(registro.momento_grafico);
-            dados.datasets[0].data.push(registro.Ellie);
-            dados.datasets[1].data.push(registro.Joel);
-            dados.datasets[2].data.push(registro.Bill);
-            dados.datasets[3].data.push(registro.Infectados);
-            dados.datasets[4].data.push(registro.Tess);
+                ],
+                tension: 0.1
+            }, {
+                label: 'Infectados',
+                backgroundColor: 'blue',
+                borderColor: 'blue',
+                fill: false,
+                data: [1
 
+                ],
+                tension: 0.1
+            },
+            {
+                label: 'Tess',
+                backgroundColor: 'gray',
+                borderColor: 'gray',
+                fill: false,
+                data: [1
 
+                ],
+                tension: 0.1
+            }]
         }
+    };
 
-        console.log('----------------------------------------------')
-        console.log('O gráfico será plotado com os respectivos valores:')
-        console.log('Labels:')
-        console.log(labels)
-        console.log('Dados:')
-        console.log(dados.datasets)
-        console.log('----------------------------------------------')
 
-        // Criando estrutura para plotar gráfico - config
-        const config = {
-            type: 'bar',
-            data: dados,
-        };
 
-        // Adicionando gráfico criado em div na tela
-        let myChart = new Chart(
-            document.getElementById('myChart'),
-            config
-        );
+    // console.log('----------------------------------------------')
+    // console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+    // console.log(resposta)
 
-        setTimeout(() => atualizarGrafico(idUsuario, dados, myChart), 2000);
-    }
+    // Inserindo valores recebidos em estrutura para plotar o gráfico
+    //     for (i = 0; i < resposta.length; i++) {
+    //         var registro = resposta[i];
+    //         labels.push(registro.momento_grafico);
+    //         dados.datasets[0].data.push(registro.Ellie);
+    //         dados.datasets[1].data.push(registro.Joel);
+    //         dados.datasets[2].data.push(registro.Bill);
+    //         dados.datasets[3].data.push(registro.Infectados);
+    //         dados.datasets[4].data.push(registro.Tess);
+
+    // }
+
+    // console.log('----------------------------------------------')
+    // console.log('O gráfico será plotado com os respectivos valores:')
+    // console.log('Labels:')
+    // console.log(labels)
+    // console.log('Dados:')
+    // console.log(dados.datasets)
+    // console.log('----------------------------------------------')
+
+    // Criando estrutura para plotar gráfico - config
+    const config = {
+        type: 'bar',
+        data: dados
+    };
+
+    // // Adicionando gráfico criado em div na tela
+    let myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+
+    setTimeout(() => atualizarGrafico(idUsuario, dados, myChart), 2000);
+
 
 
     // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
