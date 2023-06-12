@@ -1,6 +1,6 @@
 const data = [
     {
-        question: "Qual desses infectados já está tranformado a anos?",
+        question: "Qual desses infectados já está transformado a anos?",
         a: "Joel",
         b: "Corredor",
         c: "Estalador",
